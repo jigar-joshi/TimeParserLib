@@ -1,3 +1,5 @@
+package TimeParserCustom;
+
 
 import java.util.Calendar;
 import java.util.Date;
@@ -137,7 +139,7 @@ public class TimeParser {
         }
         return day;
     }
-
+    
     private int getDay(String inputString) {
         Calendar calendar = Calendar.getInstance();
         int day = calendar.get(Calendar.DAY_OF_WEEK);
@@ -149,9 +151,8 @@ public class TimeParser {
             return (askedDay + 7) - day;
         }
     }
-
-    private String getWeekDay(String inputString)
-    {
+    
+    private String getWeekDay(String inputString){
         if (inputString.contains("Sunday") || inputString.contains("sunday"))
         {
             return "Sunday";
